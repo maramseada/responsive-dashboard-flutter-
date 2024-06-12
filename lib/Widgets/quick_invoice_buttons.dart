@@ -10,20 +10,19 @@ class QuickInvoiceButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: isSelected ? Color(AppColors.blueColor) : Colors.white,
         borderRadius: BorderRadius.circular(15),
-
       ),
       child: Text(
         title,
-        style: AppStyles.style60016(context: context,
-
+        style: AppStyles.style60016(
+          context: context,
           color: isSelected ? Colors.white : Color(AppColors.blueColor),
-
         ),
       ),
+
     );
   }
 }

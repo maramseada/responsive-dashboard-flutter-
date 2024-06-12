@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 
 import 'all_expences_widget.dart';
 import 'all_expenses_quick_invoice.dart';
+import 'my_card.dart';
 
 class DashBoardTabletLayout extends StatelessWidget {
   const DashBoardTabletLayout({super.key});
@@ -15,7 +16,13 @@ class DashBoardTabletLayout extends StatelessWidget {
           child: CustomDrawer(),
           flex: 1,
         ),
-        Flexible(child: AllExpensesQuickInvoice(), flex: 2,)
+        Flexible(flex: 2,child:SingleChildScrollView(
+          child: Column(
+            children: [
+              AllExpensesQuickInvoice(),MyCard(),
+            ],
+          ),
+        ))
       ],
     );
   }

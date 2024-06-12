@@ -12,6 +12,7 @@ class AppImages{
   static String  balance = 'assets/images/moneys.svg';
   static String  settings = 'assets/images/setting-2.svg';
   static String  wallet = 'assets/images/wallet-2.svg';
+  static String  card = 'assets/images/card.svg';
 
 
 
