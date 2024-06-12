@@ -1,8 +1,8 @@
 import 'package:dashboard/Widgets/drawer_list_view_item.dart';
 import 'package:dashboard/core/Utils/images.dart';
 import 'package:flutter/cupertino.dart';
-
 import '../Models/DrawerListViewItem.dart';
+import '../Models/user_info_model.dart';
 import 'card_details.dart';
 import 'drawer_list_view.dart';
 
@@ -11,18 +11,29 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
+
+  Size size = MediaQuery.sizeOf(context);
+    return SizedBox(width: size.width*0.5,
+
+    child: CustomScrollView(
 
       slivers: [
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: SizedBox(
             height: 40,
           ),
         ),
-        SliverToBoxAdapter(
-          child: CardDetails(),
+         SliverToBoxAdapter(
+
+          child:Container(
+            margin: EdgeInsets.symmetric(horizontal: 10),
+            child:  CardDetails(info:    UserInfoModel(
+                image: 'assets/images/Group.png',
+                title: 'Madrani Andi',
+                subTitle: 'Madraniadi20@gmail'),),
+          )
         ),
-        DrawerListView(),
+        const DrawerListView(),
         SliverFillRemaining(
           hasScrollBody: false,
           child: Column(
@@ -46,6 +57,7 @@ class CustomDrawer extends StatelessWidget {
           ),
         )
       ],
+    ),
     );
   }
 }
