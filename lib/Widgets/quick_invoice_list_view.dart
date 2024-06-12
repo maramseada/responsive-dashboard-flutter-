@@ -34,19 +34,7 @@ class QuickInvoiceListView extends StatelessWidget {
             .toList(),
       ),
     );
-    // return SizedBox(
-    //   height: 80,
-    //   child: ListView.builder(
-    //       scrollDirection: Axis.horizontal,
-    //       itemCount: items.length,
-    //       itemBuilder: (context, index) {
-    //         return IntrinsicWidth(
-    //           child: UserInfoListTile(
-    //             info: items[index],
-    //           ),
-    //         );
-    //       }),
-    // );
+
 
   }
 }

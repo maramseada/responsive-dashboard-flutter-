@@ -15,7 +15,7 @@ class AllExpensesItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: getResponsiveFontSize(context, fontSize: 200),
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         border: Border.all(color: isSelected ? Colors.transparent : Color(AppColors.grayBorderColor)),
         borderRadius: BorderRadius.circular(12),
@@ -47,7 +47,7 @@ class AllExpensesItem extends StatelessWidget {
           const Spacer(),
           Text(
             item.title,
-            style: AppStyles.style60016(
+            style: AppStyles.style60014(
               context: context,
               color: isSelected ? Colors.white : Colors.black,
             ),
@@ -64,7 +64,7 @@ class AllExpensesItem extends StatelessWidget {
           SizedBox(height: getResponsiveFontSize(context, fontSize: 8),),
           Text(
             item.price,
-            style: AppStyles.style60024(
+            style: AppStyles.style60020(
               context: context,
               color: isSelected ? Colors.white : Color(AppColors.blueColor),
             ),

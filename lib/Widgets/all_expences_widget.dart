@@ -28,7 +28,7 @@ class _AllExpensesWidgetState extends State<AllExpensesWidget> {
     Size size = MediaQuery.sizeOf(context);
     return Container(
       padding: const EdgeInsets.all(20),
-      width: size.width * 0.48,
+      margin: EdgeInsets.only(left: 15, right: 15, top: 15),
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -49,7 +49,7 @@ class _AllExpensesWidgetState extends State<AllExpensesWidget> {
               )
             ],
           ),
-          SizedBox(height: 12,),
+          const SizedBox(height: 12,),
 
           Row(
             children: [
@@ -66,7 +66,7 @@ class _AllExpensesWidgetState extends State<AllExpensesWidget> {
                   ),
                 ),
               ),
-              SizedBox(width: 8,),
+              const SizedBox(width: 8,),
               Expanded(
                 child: GestureDetector(
                   onTap: () {
@@ -80,7 +80,7 @@ class _AllExpensesWidgetState extends State<AllExpensesWidget> {
                   ),
                 ),
               ),
-              SizedBox(width: 8,),
+              const SizedBox(width: 8,),
               Expanded(
                 child: GestureDetector(
                   onTap: () {

@@ -9,10 +9,14 @@ class DashBoardTabletLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
-        CustomDrawer(),
-        AllExpensesQuickInvoice()      ],
+        Flexible(
+          child: CustomDrawer(),
+          flex: 1,
+        ),
+        Flexible(child: AllExpensesQuickInvoice(), flex: 2,)
+      ],
     );
   }
 }

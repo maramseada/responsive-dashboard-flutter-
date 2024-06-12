@@ -9,15 +9,15 @@ class AllExpensesQuickInvoice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
-    return Column(
-      children: [
-SizedBox(
-       width: size.width * 0.48,
-child: AllExpensesWidget(),
-),
-        QuickInvoice(),
+    return const SingleChildScrollView(
+      child: Column(
+        children: [
+       AllExpensesWidget(),
 
-      ],
+          QuickInvoice(),
+
+        ],
+      ),
     );
   }
 }
