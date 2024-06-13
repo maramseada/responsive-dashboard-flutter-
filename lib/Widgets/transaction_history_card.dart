@@ -1,8 +1,8 @@
 import 'package:dashboard/core/Utils/colors.dart';
 import 'package:dashboard/core/Utils/font_styles.dart';
 import 'package:flutter/cupertino.dart';
-
 import '../Models/transaction_history_model.dart';
+import '../core/Utils/font_size.dart';
 
 class TransactionHistoryCard extends StatelessWidget {
   final TransactionHistoryModel info;
@@ -11,7 +11,7 @@ class TransactionHistoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      padding:  EdgeInsets.symmetric(horizontal: getResponsiveFontSize(context, fontSize: 15), vertical: getResponsiveFontSize(context, fontSize: 10)),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: Color(AppColors.grayCardColor),

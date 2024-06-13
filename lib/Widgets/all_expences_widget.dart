@@ -25,10 +25,9 @@ class _AllExpensesWidgetState extends State<AllExpensesWidget> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.sizeOf(context);
     return Container(
-      padding: const EdgeInsets.all(20),
-      margin: EdgeInsets.only(left: 15, right: 15, top: 15),
+      padding:  EdgeInsets.all(getResponsiveFontSize(context, fontSize: 15)),
+      margin:  EdgeInsets.only(left: getResponsiveFontSize(context, fontSize: 15), right: getResponsiveFontSize(context, fontSize: 15), top: getResponsiveFontSize(context, fontSize: 15),),
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -44,12 +43,12 @@ class _AllExpensesWidgetState extends State<AllExpensesWidget> {
               ),
               const Spacer(),
               SizedBox(
-                width: getResponsiveFontSize(context, fontSize: 120),
+                width: getResponsiveFontSize(context, fontSize: 130),
                 child: const MyDropdown(),
               )
             ],
           ),
-          const SizedBox(height: 12,),
+           SizedBox(height: getResponsiveFontSize(context, fontSize: 12),),
 
           Row(
             children: [

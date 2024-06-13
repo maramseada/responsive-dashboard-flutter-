@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
+import '../core/Utils/font_size.dart';
 import '../core/Utils/font_styles.dart';
 import 'custom_text_field.dart';
 
@@ -19,7 +20,7 @@ class QuickInvoiceTextFieldDetails extends StatelessWidget {
            title,
             style: AppStyles.style50016(context: context),
           ),
-          const SizedBox(height: 10,),
+           SizedBox(height: getResponsiveFontSize(context, fontSize: 10),),
           CustomTextField(
             onChanged: (String value) {},
             initialValue: textFieldTitle,

@@ -4,6 +4,7 @@ import 'package:dashboard/core/Utils/images.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../Models/DrawerListViewItem.dart';
+import '../core/Utils/font_size.dart';
 import 'drawer_list_view_item.dart';
 
 class DrawerListView extends StatefulWidget {
@@ -42,7 +43,7 @@ class _DrawerListViewState extends State<DrawerListView> {
             }
           },
           child: Padding(
-            padding: const EdgeInsets.only(top: 20),
+            padding:  EdgeInsets.only(top: getResponsiveFontSize(context, fontSize: 20),),
             child: DrawerListViewItem(
               drawerItem: items[index],
               isActiv: activeIndex == index,

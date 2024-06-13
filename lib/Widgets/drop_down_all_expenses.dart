@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../core/Utils/colors.dart';
+import '../core/Utils/font_size.dart';
 import '../core/Utils/font_styles.dart';
 
 class MyDropdown extends StatefulWidget {
@@ -20,7 +21,7 @@ class _MyDropdownState extends State<MyDropdown> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
+      padding:  EdgeInsets.symmetric(horizontal: getResponsiveFontSize(context, fontSize: 12), ),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), border: Border.all(color: Color(AppColors.grayBorderColor), width: 1)),
       child: DropdownButton<String>(
         value: _selectedItem,
@@ -46,9 +47,9 @@ class _MyDropdownState extends State<MyDropdown> {
         style: AppStyles.style60016(context: context),        dropdownColor: Colors.white,
         icon: Transform.rotate(
           angle:-1.57079633 * 5,
-          child: const Icon(
+          child:  Icon(
             Icons.arrow_back_ios_new,
-            size: 18,
+            size: getResponsiveFontSize(context, fontSize: 18) ,
             weight: 1,
           ),
         ),

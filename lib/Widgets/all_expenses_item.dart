@@ -15,7 +15,7 @@ class AllExpensesItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: getResponsiveFontSize(context, fontSize: 200),
-      padding: const EdgeInsets.all(12),
+      padding:  EdgeInsets.all(getResponsiveFontSize(context, fontSize: 12),),
       decoration: BoxDecoration(
         border: Border.all(color: isSelected ? Colors.transparent : Color(AppColors.grayBorderColor)),
         borderRadius: BorderRadius.circular(12),
@@ -28,18 +28,18 @@ class AllExpensesItem extends StatelessWidget {
           Row(
             children: [
               Container(
-                padding: EdgeInsets.all(8),
-                decoration: BoxDecoration(shape: BoxShape.circle, color: isSelected ? Color(0xff60BEF3) : Color(AppColors.grayCardColor)),
+                padding: EdgeInsets.all(getResponsiveFontSize(context, fontSize: 8),),
+                decoration: BoxDecoration(shape: BoxShape.circle, color: isSelected ? const Color(0xff60BEF3) : Color(AppColors.grayCardColor)),
                 child: SvgPicture.asset(
                   item.image,
-                  width: 32,
+                  width: getResponsiveFontSize(context, fontSize: 30),
                   color: isSelected ? Colors.white : Color(AppColors.blueColor),
                 ),
               ),
               const Spacer(),
               Icon(
                 Icons.arrow_forward_ios_rounded,
-                size: 20,
+                size: getResponsiveFontSize(context, fontSize: 20),
                 color: isSelected ? Colors.white : Color(AppColors.blueColor),
               ),
             ],

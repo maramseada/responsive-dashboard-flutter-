@@ -6,5 +6,7 @@ class AppColors{
   static int redColor = 0xffF3735E;
  static int greenColor = 0xff7DD97B;
 static int darkBlueColor = 0xff064061;
+static int semiDarkBlueColor = 0xff208CC8;
+static int grayChart = 0xffE2DECD;
 
 }

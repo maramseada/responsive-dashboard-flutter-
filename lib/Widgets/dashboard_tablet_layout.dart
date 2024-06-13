@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 
 import 'all_expences_widget.dart';
 import 'all_expenses_quick_invoice.dart';
+import 'income_widget.dart';
 import 'my_card.dart';
 
 class DashBoardTabletLayout extends StatelessWidget {
@@ -10,19 +11,27 @@ class DashBoardTabletLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return  Row(
       children: [
         Flexible(
-          child: CustomDrawer(),
           flex: 1,
+          child: CustomDrawer(),
         ),
-        Flexible(flex: 2,child:SingleChildScrollView(
-          child: Column(
-            children: [
-              AllExpensesQuickInvoice(),MyCard(),
-            ],
-          ),
-        ))
+        Flexible(
+            flex: 2,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  AllExpensesQuickInvoice(),
+                  Container(        margin: EdgeInsets.only(left: 15),
+                    child:     MyCard(),),
+                  Container(
+                    margin: EdgeInsets.only(left: 15),
+                    child: IncomeWidget(),
+                  )
+                ],
+              ),
+            )),
       ],
     );
   }

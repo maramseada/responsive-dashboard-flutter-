@@ -7,7 +7,6 @@ class QuickInvoiceListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.sizeOf(context);
 
      List  items = [
       UserInfoModel(

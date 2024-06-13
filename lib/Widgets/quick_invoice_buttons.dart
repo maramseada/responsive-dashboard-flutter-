@@ -2,6 +2,8 @@ import 'package:dashboard/core/Utils/colors.dart';
 import 'package:dashboard/core/Utils/font_styles.dart';
 import 'package:flutter/material.dart';
 
+import '../core/Utils/font_size.dart';
+
 class QuickInvoiceButtons extends StatelessWidget {
   final String title;
   final bool isSelected;
@@ -10,7 +12,7 @@ class QuickInvoiceButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(15),
+      padding:  EdgeInsets.all(getResponsiveFontSize(context, fontSize: 15)),
       decoration: BoxDecoration(
         color: isSelected ? Color(AppColors.blueColor) : Colors.white,
         borderRadius: BorderRadius.circular(15),
