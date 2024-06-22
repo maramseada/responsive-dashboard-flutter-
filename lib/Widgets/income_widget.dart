@@ -46,7 +46,7 @@ class IncomeWidget extends StatelessWidget {
                 child: const IncomeChart(),
               ),
               SizedBox(
-                  width: MediaQuery.sizeOf(context).width * 0.3,
+                  width: MediaQuery.sizeOf(context).width * 0.29,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

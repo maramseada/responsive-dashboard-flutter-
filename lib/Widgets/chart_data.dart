@@ -35,7 +35,7 @@ class ChartData extends StatelessWidget {
             alignment: Alignment.bottomRight,
             child: Text(
               info.percent,
-              style: AppStyles.style50016(context: context, color: Color(AppColors.blueColor)),
+              style: AppStyles.style60014(context: context, color: Color(AppColors.blueColor)),
             ),
           )
         ],
