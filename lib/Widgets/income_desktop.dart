@@ -1,8 +1,6 @@
 
 import 'package:dashboard/Widgets/pie_chart_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../Models/chart_data_model.dart';
 import '../core/Utils/colors.dart';
 import '../core/Utils/font_size.dart';
@@ -16,7 +14,7 @@ class IncomeWidgetDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding:  EdgeInsets.all(getResponsiveFontSize(context, fontSize: 20), ),
+      padding:  EdgeInsets.all(getResponsiveFontSize(context, fontSize: 25), ),
       margin:  EdgeInsets.only(right: getResponsiveFontSize(context, fontSize: 15), bottom: getResponsiveFontSize(context, fontSize: 15), ),
       decoration: BoxDecoration(
         color: Colors.white,
